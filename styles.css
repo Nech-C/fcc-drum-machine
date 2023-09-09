@@ -28,28 +28,17 @@ body {
     justify-content: space-between;
 }
 
-#displays {
+/* lower */
+
+#lower-panel {
     width: 100%;
-    height: 17%;
-    
+    height: 75%;
+    background-color: 	#2F4F4F;
     display: flex;
     justify-content: space-between;
 }
 
-
-
-#displays * {
-    background-color: #00351c;
-    width: 49.5%;
-    color: ghostwhite;
-    text-align: center;
-}
-
-#lowerpanel {
-    width: 100%;
-    height: 75%;
-    background-color: 	#2F4F4F;
-}
+/* lower-left drumpads*/
 
 #drum-pads {
     display: flex;
@@ -78,4 +67,54 @@ body {
 }
 
 
+/* lower-right info panel */
+
+#info-panel {
+    width: 48%; 
+    height: 100%;
+    padding: 10px;
+    background-color: #2F4F4F; 
+    color: white; 
+    overflow-y: auto;
+}
+
+
+/* displays */
+#displays {
+    width: 100%;
+    height: 17%;
+    
+    display: flex;
+    justify-content: space-between;
+}
+
+
+#displays #display, #displays #volume-bars {
+    background-color: #00351c;
+    width: 49.5%;
+    color: ghostwhite;
+    text-align: center;
+}
+
+
+/* volume display */
+#volume-bars {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    background-color: #00351c;
+}
+
+.volume-bar {
+    width: 9%;
+    height: 100%;
+    background-color: #00351c; /* Off state background color */
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.volume-bar.on {
+    background-color: ghostwhite; /* On state background color */
+}
 
